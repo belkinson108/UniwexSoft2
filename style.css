@@ -1,0 +1,241 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-image: url("img/Moon.png"), radial-gradient(50.13% 135% at 68.54% 62.52%, #20303D 0%, #15212D 100%);/* Задал цвет фон всему боди, сначала картинкой, а потом градиентам*/
+    background-repeat: no-repeat, no-repeat; /*Настраиваем параметры бекграунда отдельно для куартинки и градиента*/
+    background-position: top;
+    background-size: contain;
+    font-size: 18px;
+    margin: 0;
+
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width:1625px;
+    border: 1px solid;
+    margin: 40px auto 0 auto;
+}
+
+.logo {
+    background: url("img/logo.svg") no-repeat center;
+    background-size: contain;
+    width: 206px;
+    height: 44px;
+    border: 1px solid black;
+}
+.navigationContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    gap: 60px;
+}
+main {
+    border: red solid;
+    height: 10000px;
+    max-width: 1624px; /* Прибывляем по 140 с каждой стороны чтобы макс. размер блока мейн был равен  макс.размеру хедер*/
+    margin: 0 auto;
+}
+
+.container { /* Для того чтобы был отступ по отношению к хедеру*/
+    margin: 0 140px;
+}
+
+.Gagarin {
+    display: flex;
+    margin-top: 40px;
+    gap: 95px;
+    border: solid white;
+}
+
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    gap: 40px;
+    border: solid blue;
+}
+.astronaut {
+    background: url("img/Gagarin.png") no-repeat;
+    background-size: contain;
+    width: 42%;
+    height: 747px;
+    border: purple solid;
+}
+.uniwexSoft {
+    background: url("img/UniwexSoft.svg") no-repeat;
+    background-size: contain;
+    width:353px;
+    height:143px;
+    border: solid aqua;
+}
+.about {
+    border: solid lime;
+}
+.button {
+    width: 338px;
+    height: 63px;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #DA22FF 0%, #9733EE 100%);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.basicServices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    gap: 95px;
+}
+.services {
+    background: url("img/Services.svg") no-repeat;
+    background-size: contain;
+    width:385px;
+    height:133px;
+    border: solid white;
+}
+.development {
+    display: flex;
+    flex-wrap: wrap;
+    width: 866px;
+    height: 198px;
+    border: solid black;
+}
+.num {
+    display: flex;
+    font-family: Roboto;
+    font-size: 72px;
+    color: #DA22FF;
+}
+.size--1 {
+    display: flex;
+    align-items: center;
+    width: 37%;
+    gap: 10px;
+
+}
+.size--2 {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    gap: 10px;
+
+}
+.aboutUs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.aboutUs p {
+    font-size:16px;
+}
+.leftColumn{
+    width: 296px;
+    text-align: right;
+}
+.team--1{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.team--1_1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.sign--1 {
+    display: flex;
+    background: url("img/1.svg")no-repeat;
+    width: 74px;
+    height: 85px;
+}
+
+.sign--2 {
+    display: flex;
+    background: url("img/2.svg")no-repeat;
+    width: 74px;
+    height: 85px;
+}
+.sign--3 {
+    display: flex;
+    background: url("img/3.svg")no-repeat;
+    width: 74px;
+    height: 85px;
+}
+.team--2 {
+    display: flex;
+    background: url("img/professional.svg")no-repeat;
+    width:31%;
+    height: 366px;
+}
+.team--3 {
+    display: flex;
+    flex-direction: column;
+    width:30%;
+}
+.team--3_1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.rightColumn {
+    width: 296px;
+    text-align: left;
+}
+.sign--4 {
+    display: flex;
+    background: url("img/4.svg")no-repeat;
+    width: 74px;
+    height: 85px;
+}
+.sign--5 {
+    display: flex;
+    background: url("img/5.svg")no-repeat;
+    width: 74px;
+    height: 85px;
+}
+.sign--6 {
+    display: flex;
+    background: url("img/6.svg")no-repeat;
+    width: 74px;
+    height: 85px;
+}
+.interaction {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+}
+.interactionModel {
+    display: flex;
+    background: url("img/model.svg")no-repeat;
+    width: 28%;
+    margin: 0 auto;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.list p+ circle{
+
+}
+
