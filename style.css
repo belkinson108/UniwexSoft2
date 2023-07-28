@@ -9,15 +9,12 @@ body {
     font-size: 18px;
     margin: 0;
 }
-
 p {
     margin: 0;
 }
 @media only screen and (width < 749px) {}
 @media only screen and (749px <= width < 969px) {}
 @media only screen and (969px <= width < 1200px) {}
-
-
 
 header {
     display: flex;
@@ -35,11 +32,14 @@ header {
 .navigationContainer {
     display: flex;
     align-items: center;
-    /*border: 1px solid;*/
     gap: 60px;
 }
+.navigationContainer a:hover {
+    color: #9733EE;
+    text-decoration: underline;
+}
 
-@media only screen and ( width < 749px) { /*Шапка*/
+@media only screen and ( width < 749px) {
     body {
         background-position: top;
         background-size: 210%;
@@ -49,49 +49,111 @@ header {
         flex-direction: column;
         max-width: 749px;
         gap: 15px;
-
     }
     .logo {
         width: 137px;
         height: 29px;
         margin: 0 auto;
         background-size:contain;
-        /*border: 1px solid white;*/
     }
     .navigationContainer {
         font-size: 14px;
         gap: 27px;
         margin: 0 auto;
-        /*border: 1px solid white;*/
         max-width: 290px;
         height: 22px;
     }
-    .navigationContainer a{
+
+}/*Шапка мобилка*/
+@media only screen and (749px <= width < 969px) {
+    body {
+        background-size: 210%;
+    }
+    header {
+        margin-top: 10px;
+        flex-direction: column;
+        max-width: 969px;
+    }
+    .logo {
+        width: 172px;
+        height: 35px;
+        margin: 0 auto;
+        background-size:contain;
+    }
+    .navigationContainer {
+        font-size: 16px;
+        gap: 43px;
+        margin: 17px auto 0 auto;
 
     }
-}
 
+
+}/*Шапка планшет*/
+@media only screen and (969px <= width < 1200px) {
+    body {
+        background-size: 210%;
+    }
+    header {
+        max-width: 1200px;
+        padding: 0 15px;
+    }
+
+}
+@media only screen and (1200px <= width < 1500px) {
+    body {
+        background-size: 150%;
+    }
+    header {
+        max-width: 1400px;
+        padding: 0 15px;
+    }
+    main {
+        padding: 0 15px;
+    }
+}
 main {
-    height: 3632px;
     max-width: 1624px; /* Прибывляем по 140 с каждой стороны чтобы макс. размер блока мейн был равен  макс.размеру хедер*/
     margin: 0 auto;
-   /*border: 1px solid white;*/
 }
-
-    .container { /* Для того чтобы был отступ по отношению к хедеру*/
+.container { /* Для того чтобы был отступ по отношению к хедеру*/
     margin: 0 140px;
 }
-
 @media only screen and ( width < 749px) {
     main {
-        /*border: red solid;*/
         margin: 0 15px;
     }
-
     .container {
         margin: 0;
-
     }
+}
+@media only screen and (749px <= width < 969px) {
+    main {
+        margin: 0 15px;
+    }
+    .container {
+        margin: 0;
+    }
+}
+@media only screen and (969px <= width < 1200px) {
+    main {
+        margin: 0 15px;
+        padding: 0;
+    }
+    .container {
+        margin: 0;
+        padding: 0 15px;
+    }
+
+}
+@media only screen and (1200px <= width < 1500px) {
+    main {
+        margin: 0 15px;
+    }
+    .container {
+        margin: 0;
+        padding: 0 15px;
+    }
+
 }
 
 .Gagarin {
@@ -99,7 +161,6 @@ main {
     margin-top: 40px;
     gap: 95px;
 }
-
 .contactUs {
     display: flex;
     flex-direction: column;
@@ -107,35 +168,44 @@ main {
     max-width: 50%;
     gap: 40px;
     font-size: 24px;
-
 }
 .astronaut {
     background: url("img/Gagarin.png") no-repeat center;
     background-size: contain;
     width: 42%;
     height: 747px;
-    /*border: purple solid;*/
 }
 .uniwexSoft {
     background: url("img/UniwexSoft.svg") no-repeat;
     background-size: contain;
-    width:53%;
-    height:143px;
-
-}
-.about {
-    /*border: solid lime;*/
+    width:353px;
+    height:130px;
 }
 .button {
-    width: 51%;
+    width: 338px;
     height: 63px;
     color: #FFFFFF;
     background: linear-gradient(90deg, #DA22FF 0%, #9733EE 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    font-weight: 400;
+    transition: 0.5s;
 
+}
+.button span {
+    font-size: 24px;
+}
+.button:hover {
+    background: var(--clr);
+    letter-spacing: 0.1em;
+    box-shadow: 0 0 35px var(--clr);
+}
 @media only screen and ( width < 749px) {
     .Gagarin {
         display: block;
@@ -157,7 +227,67 @@ main {
         width: 166px;
         height: 37px;
     }
+    .button span {
+        font-size: 13px;
+    }
 
+}
+@media only screen and (749px <= width < 969px) {
+    .Gagarin {
+        gap: 66px;
+    }
+    .contactUs {
+        text-align: start;
+        font-size: 18px;
+    }
+    .uniwexSoft {
+        width: 261px;
+        height: 105px;
+        background-size: contain;
+    }
+    .button {
+        width: 251px;
+        height: 63px;
+    }
+    .button span {
+        font-size: 19px;
+    }
+    .astronaut {
+        width: 412px;
+        height: 523px;
+        background-size: contain;
+        background-position: left;
+    }
+}
+@media only screen and (969px <= width < 1200px) {
+    .contactUs p {
+        font-size: 20px;
+    }
+    .button {
+        width: 338px;
+        height: 63px;
+    }
+    .button span {
+        font-size: 20px;
+        text-transform: none;
+    }
+    .astronaut {
+        width: 500px;
+        height: 635px;
+        background-position: center;
+        background-size: contain;
+    }
+}
+@media only screen and (1200px <= width < 1500px) {
+    .Gagarin {
+        justify-content: space-around;
+    }
+    .astronaut {
+        width: 42%;
+    }
+    .button span {
+        font-size: 23px;
+    }
 }
 
 .basicServices {
@@ -169,13 +299,11 @@ main {
     background: url("img/Services.svg") no-repeat center;
     background-size: contain;
     width:385px;
-
 }
 .development {
     display: flex;
     flex-wrap: wrap;
     width: 65%;
-
 }
 .num {
     display: flex;
@@ -196,7 +324,6 @@ main {
     align-items: center;
     width: 60%;
     gap: 10px;
-
 }
 
 @media only screen and ( width < 749px){
@@ -209,6 +336,7 @@ main {
     .services {
         width:170px;
         height:60px;
+        background-size: contain;
 
     }
     .development {
@@ -225,6 +353,69 @@ main {
     }
     .size--1, .size--2  {
         width: auto;
+    }
+
+}
+@media only screen and (749px <= width < 969px){
+    .basicServices {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 33px;
+    }
+    .services {
+        width: 320px;
+        height: 120px;
+        background-size: contain;
+    }
+    .development {
+        font-size: 17px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+    .size--1, .size--2 {
+        width: 100%;
+    }
+    .num {
+        font-size: 60px;
+    }
+
+
+
+}
+@media only screen and (969px <= width < 1200px) {
+    .basicServices {
+        margin-top: 50px;
+    }
+    .services {
+        width: 327px;
+        height: 115px;
+        background-size: contain;
+        align-self: center;
+    }
+    .num {
+        font-size: 61px;
+    }
+    .development {
+        font-size: 16px;
+        gap: 15px
+    }
+    .development p {
+        font-size: 13px;
+    }
+
+
+}
+@media only screen and (1200px <= width < 1500px){
+    .basicServices {
+        margin-top: 30px;
+    }
+    .development {
+        gap: 3%;
+    }
+    .development p {
+        width: 100%;
     }
 
 }
@@ -260,7 +451,6 @@ main {
 .leftText{
     text-align: right;
 }
-
 .team-1 {
     display: flex;
     align-items: center;
@@ -273,7 +463,6 @@ main {
     width: 74px;
     height: 85px;
 }
-
 .sign-2 {
     display: flex;
     background: url("img/2.svg")no-repeat;
@@ -294,9 +483,6 @@ main {
     background-size: contain;
     width:29%;
     height: 396px;
-
-    /*border: 1px solid brown;*/
-
 }
 .post-3 {
     display: flex;
@@ -304,7 +490,6 @@ main {
     flex-direction: column;
     width:29%;
     gap: 30px;
-
 }
 .team-3 {
     display: flex;
@@ -350,25 +535,98 @@ main {
         font-size: 24px;
         text-align: center;
         font-weight: 100;
-        margin-top: 50px;
+        width: 100%;
+        margin-bottom: 30px;
     }
     .aboutUs {
         flex-direction: column;
-        /*margin-top: 30px;*/
-        border: 1px solid dodgerblue;
         gap: 15px;
-        margin: 30px auto 0 auto;
+        margin: 50px auto 0 auto;
         max-width: 500px;
     }
     .post-1, .post-3 {
         width: 100%;
+        gap: 15px;
     }
     .aboutUs p {
         font-size: 14px;
-        /*width: 204px;*/
     }
     .team-1, .team-3{
         width: 100%;
+
+    }
+
+}
+@media only screen and (749px <= width < 969px){
+    .aboutUs {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 708px;
+        margin: 80px auto 0 auto;
+    }
+    .aboutUs p {
+        font-size: 17px;
+        line-height: 23px;
+    }
+    .post-1 {
+        width: 100%;
+        gap: 21px;
+    }
+    .achievingGoals {
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 100;
+        width: 100%;
+        margin-bottom:20px ;
+    }
+    .team-1 {
+        place-content: flex-end;
+    }
+    .post-2 {
+       display: none;
+    }
+    .post-3 {
+        width: 100%;
+        gap: 21px;
+    }
+    .leftText {
+        font-size: 14px;
+    }
+}
+@media only screen and (969px <= width < 1200px) {
+    .aboutUs {
+        gap:15px ;
+    }
+     .aboutUs p {
+         font-size: 13px;
+     }
+    .post-1 {
+        width: 33%;
+        justify-content: space-between;
+    }
+    .post-2 {
+        width: 314px;
+        height: 311px;
+        background-size: contain;
+        box-sizing: border-box;
+    }
+    .post-3 {
+        width: 33%;
+        justify-content: space-between;
+    }
+
+
+}
+@media only screen and (1200px <= width < 1500px) {
+    .aboutUs {
+        justify-content: center;
+        gap: 60px;
+    }
+    .post-3 {
+        width: 30%;
     }
 
 }
@@ -384,27 +642,23 @@ main {
     background: url("img/model.svg")no-repeat center;
     background-size: contain;
     width: 26%;
-
 }
 .list  {
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     flex-wrap: wrap;
     width: 65%;
     gap: 30px;
-
 }
 .list p {
     width: 99%;
     display: flex;
     align-items: center;
 }
-
 .columnText1{
     display: flex;
     flex-direction: row;
     width: 36%;
-
 }
 .columnText2 {
     width: 60%;
@@ -428,7 +682,6 @@ main {
     .interaction {
         margin-top: 50px;
         flex-direction: column;
-        border: 1px solid blue;
         gap: 30px;
     }
     .interactionModel {
@@ -436,17 +689,72 @@ main {
         height:76px;
         background-size: contain;
         background-position: left;
-
     }
     .list {
         font-size: 14px;
-        border: 1px solid gold;
         width: 100%;
         gap: 15px;
     }
    .columnText1, .columnText2 {
        width:90%;
    }
+}
+@media only screen and (749px <= width < 969px){
+    .interaction {
+
+        margin-top: 80px;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .interactionModel {
+        width:300px;
+        height:165px;
+        background-size: contain;
+        margin-bottom: 20px;
+    }
+    .columnText1, .columnText2 {
+        width:100%;
+    }
+    .list {
+        width: 100%;
+    }
+
+}
+@media only screen and (969px <= width < 1200px){
+    .interaction {
+        flex-direction: row;
+        gap: 50px;
+        align-items: center;
+    }
+    .interactionModel {
+        width:240px;
+        height:110px;
+        background-size: contain;
+    }
+    .list {
+        width: 68%;
+        font-size: 14px;
+        align-items: normal;
+        gap: 20px;
+        min-height: 90px;
+    }
+
+}
+@media only screen and (1200px <= width < 1500px) {
+    .interaction {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 80px;
+        gap: 95px;
+    }
+    .interactionModel {
+        width: 374px;
+        height: 165px;
+        background-size: contain;
+    }
+    .list {
+        width: 100%;
+    }
 }
 
 .bigNum {
@@ -476,7 +784,15 @@ main {
         display: none;
     }
 }
-/************************************************************/
+@media only screen and (749px <= width < 969px) {
+.bigNum {
+    display: none;
+}
+}
+@media only screen and (969px <= width < 1200px) {
+    .bigNum {
+       display: none;}
+}
 .rocketSnake {
     display: none;
 }
@@ -484,50 +800,34 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    max-width: 1324px;
-    height: 1045px;
-
 }
 .weUse p {
     text-align: center;
     margin-bottom: 20px;
 }
-
+.leftColumnRocket, .rightColumnRocket  {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 43%;
+}
 .leftColumnRocket {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    /*border: solid aqua;*/
-    width: 43%;
-    gap: 30px;
-    padding-bottom: 135px;
+    margin-bottom: 80px;
 }
-
-.rocket {
-    /*border: solid red;*/
-    width: 11%;
-
+.leftColumnRocket > div, .rightColumnRocket > div{
+    width: 100%;
 }
-.rightColumnRocket {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 43%;
-    /*gap: 39px;*/
-    /*border: solid sienna;*/
-}
-
-.block-1 {
+.block-1, .block-2 {
+    margin-bottom: 30px;
     border: 1px solid white;
     position: relative;
     background-color: #20303D;
-    width: 85%;
-    padding: 20px 33px 37px 33px;
+    width: 100%;
+    padding: 5%;
     gap: 20px;
-    margin-top: 20px;
-
+    box-sizing: border-box;
 }
-.block-1::after {
+.block-1::after, .block-2::after {
     content:"";
     display: block;
     position: absolute;
@@ -538,12 +838,15 @@ main {
     rotate: 135deg;
     background-color: #20303D;
     right: -12px;
-    top: 82px;
+    top: 45%;
 }
-.emblem-1 {
+.emblem-1, .emblem-2 {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+.emblem-1 > div, .emblem-2 > div, .emblem-3 > div, .emblem-4 > div, .emblem-5 > div {
+    background-size: contain;
 }
 .symbol-1 {
     background: url("img/block1/1-1.png")no-repeat;
@@ -560,45 +863,10 @@ main {
     width: 84px;
     height: 75px;
 }
-
-
 .symbol-4 {
     background: url("img/block1/1-4.png") no-repeat;
     width: 65px;
     height: 75px;
-}
-
-.block-2 {
-    border: 1px solid white;
-    position: relative;
-    background-color: #20303D;
-    padding: 28px;
-    gap: 20px;
-    margin-top: 20px;
-    width: 87%;
-}
-
-.block-2::after {
-    content:"";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    rotate: 135deg;
-    background-color: #20303D;
-    right: -12px;
-    top: 108px;
-}
-
-
-.emblem-2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: end;
-    gap: 20px;
 }
 .symbol-5 {
     background: url("img/block1/2-1.png")no-repeat;
@@ -613,26 +881,25 @@ main {
 .symbol-7 {
     background: url("img/block1/2-3.png")no-repeat bottom;
     width: 145px;
-    height: 107px;
+    height: 116px;
 }
 .rocket {
-    background: url("img/rocket.png")no-repeat;
+    background: url("img/rocket.png")no-repeat center;
     background-size: contain;
     height: 1050px;
-    margin-top: 50px;
-}
+    width: 14%;
 
-.block-3 {
+}
+.block-3, .block-4, .block-5 {
     position: relative;
     background-color: #20303D;
-    margin-left:16px;
-    gap: 20px;
     margin-bottom: 30px;
-    width: 87%;
-    padding: 15px 28px 35px 28px;
+    width: 100%;
+    padding: 5%;
     border: 1px solid white;
+    box-sizing: border-box;
 }
-.block-3::before {
+.block-3::before, .block-4::before, .block-5::before {
     content: "";
     display: block;
     position: absolute;
@@ -645,12 +912,10 @@ main {
     left: -12px;
     top: 45%;
 }
-
 .emblem-3 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-evenly;
 }
 .rightSymbol-1 {
     background: url("img/block1/3-1.png")no-repeat;
@@ -687,33 +952,6 @@ main {
     width: 65px;
     height: 35px;
 }
-
-.block-4 {
-    position: relative;
-    background-color: #20303D;
-    padding: 20px 0 20px 0;
-    gap: 20px;
-    margin-top: 20px;
-    margin-left: 16px;
-    width: 97%;
-    /*height: 208px;*/
-    border: 1px solid white;
-}
-
-.block-4::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    rotate: -45deg;
-    background-color: #20303D;
-    left: -12px;
-    top: 80px;
-
-}
 .emblem-4 {
     display: flex;
     justify-content: center;
@@ -729,35 +967,6 @@ main {
     width: 104px;
     height: 104px;
 }
-.telegram {
-   margin-top: 39px;
-}
-.block-5 {
-    position: relative;
-    background-color: #20303D;
-    padding: 27px 28px 38px;
-    gap: 20px;
-    margin-top: 20px;
-    margin-left: 16px;
-    width: 87%;
-    border: 1px solid white;
-
-}
-.block-5::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    rotate: -45deg;
-    background-color: #20303D;
-    left: -12px;
-    top: 41%;
-
-}
-
 .emblem-5 {
     display: flex;
     justify-content: center;
@@ -774,8 +983,8 @@ main {
     width: 265px;
     height: 79px;
 }
-/*********************************************************/
 @media only screen and ( width < 749px) {
+
     .weUse {
         display: none;
     }
@@ -784,8 +993,6 @@ main {
         flex-direction: column;
         width: 290px;
         margin: 50px auto 0 auto;
-        border: 1px solid red;
-
     }
     .horizonDashed{
         background: url("img/horizont.png") no-repeat;
@@ -799,7 +1006,6 @@ main {
         width: 100%;
         height: 173px;
     }
-
     .leftDashed {
         background: url("img/bottom.png") no-repeat;
         background-size: contain;
@@ -811,7 +1017,6 @@ main {
         flex-direction: column;
         text-align: center;
         width: 275px;
-
     }
     .backEnd, .leftDashed {
         width: 290px;
@@ -825,8 +1030,9 @@ main {
     .block-3 {
         display: flex;
         flex-direction: column;
-        padding: 8px 0 10px 0;
+        padding: 4%;
         width: 275px;
+        gap: 10px;
         margin-left: auto;
     }
     .block-3 p {
@@ -887,7 +1093,6 @@ main {
         height: 17px;
         align-self: center;
     }
-/******************************************/
     .rightDashed {
         background: url("img/bottom.png") no-repeat right;
         background-size: contain;
@@ -907,18 +1112,20 @@ main {
         width: 290px;
         margin-top: 15px;
         font-size: 12px;
-        /*margin-bottom: 10px;*/
     }
-    .block-1 {
+    .block-1, .block-2 {
         display: flex;
         flex-direction: column;
         width: 275px;
-        gap: 7px;
-        padding: 25px 0 24px 0;
         margin-top:10px;
+    }
+    .block-1 {
+        padding: 7%;
+        gap: 14px;
     }
     .block-1 p {
         font-size: 10px;
+        text-align: right;
     }
     .block-1::after {
         content: "";
@@ -957,7 +1164,6 @@ main {
         height: 40px;
         background-size: contain;
     }
-/****************************************************/
     .smartContracts {
         display: flex;
         flex-direction: column;
@@ -967,7 +1173,6 @@ main {
     .smartContracts, .leftDashed {
         width: 290px;
     }
-
     .smartContracts > p {
         width: 290px;
         margin-top: 15px;
@@ -978,7 +1183,7 @@ main {
         flex-direction: column;
         padding: 26px 0 26px 0;
         width: 275px;
-        gap: 7px;
+        gap: 10px;
         margin-top: 10px;
         margin-left: auto;
     }
@@ -999,9 +1204,7 @@ main {
         top: 45%;
     }
     .emblem-4 {
-        width: 194px;
-        gap: 7px;
-        margin: 0 auto;
+        gap: 13px;
     }
     .rightSymbol-8 {
         width: 143px;
@@ -1013,7 +1216,6 @@ main {
         height: 47px;
         background-size: contain;
     }
-    /***********************************************/
     .dataStorage {
         display: flex;
         flex-direction: column;
@@ -1029,12 +1231,8 @@ main {
         font-size: 12px;
     }
     .block-2 {
-        display: flex;
-        flex-direction: column;
-        width: 275px;
         gap: 10px;
-        padding: 32px 0 32px 0;
-        margin-top:10px;
+        padding: 11%;
     }
     .block-2::after {
         content: "";
@@ -1049,22 +1247,18 @@ main {
         right: -7px;
         top: 45%;
     }
-    .emblem-2 {
-        width: 100%;
-        margin: 0 auto;
-        align-items: center;
-    }
+
     .block-2 p {
         font-size: 10px;
         align-items: center;
     }
     .symbol-5 {
-        width: 52px;
+        width: 60px;
         height: 48px;
         background-size: contain;
     }
     .symbol-6 {
-        width: 66px;
+        width: 80px;
         height: 48px;
         background-size: contain;
     }
@@ -1074,8 +1268,6 @@ main {
         background-size: contain;
         background-position: bottom;
     }
-
-    /************************************/
     .telegram {
         display: flex;
         flex-direction: column;
@@ -1089,7 +1281,7 @@ main {
     .telegram > p {
         width: 290px;
         margin-top: 15px;
-        /*margin-bottom: 10px;*/
+
         font-size: 12px;
 
     }
@@ -1136,10 +1328,277 @@ main {
         height: 39px;
     }
 }
+@media only screen and (749px <= width < 969px){
+    .weUse {
+        margin-top: 80px;
+        font-size: 13px;
+    }
+    .block-1, .block-2, .block-3, .block-4, .block-5 {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .leftColumnRocket {
+        margin-bottom: 55px;
+        width: 43%;
 
+    }
+    .block-1 {
+        padding: 5% 10% 5% 10%;
+        height: 140px;
+    }
+    .block-2 {
+        padding: 5% 10% 5% 10%;
+    }
+
+    .block-1::after, .block-2::after {
+        top:45%;
+        width: 15px;
+        height: 15px;
+        right: -9px;
+    }
+    .block-3::before, .block-4::before, .block-5::before {
+        width: 15px;
+        height: 15px;
+        left: -9px;
+        top:45%
+
+    }
+    .emblem-1 div, .emblem-2 div {
+        background-size: contain;
+    }
+    .symbol-5 {
+        height: 49px;
+    }
+    .symbol-6 {
+        width: 165px;
+        height: 50px;
+    }
+    .symbol-7 {
+        background-position: top;
+        width: 180px;
+        height: 57px;
+    }
+    .rocket {
+        width: 14%;
+        height: auto;
+        background-position: top;
+
+    }
+    .rightColumnRocket {
+        justify-content: center;
+        width: 43%;
+        margin-top: 110px;
+    ;
+    }
+    .block-3 {
+        margin:0;
+        padding: 5%;
+    }
+    .emblem-3 {
+        justify-content: center;
+        gap:15px
+    }
+    .rightSymbol-1 {
+        background-size: contain;
+        width: 42px;
+        height: 20px;
+    }
+    .rightSymbol-2 {
+        background-size: contain;
+        width: 114px;
+        height: 23px;
+    }
+    .rightSymbol-3 {
+        background-size: contain;
+        width: 39px;
+        height: 14px;
+        align-self: center;
+    }
+    .rightSymbol-4 {
+        background-size: contain;
+        width: 25px;
+        height: 20px;
+    }
+    .rightSymbol-5 {
+        background-size: contain;
+        width: 114px;
+        height: 28px;
+    }
+    .rightSymbol-6 {
+        background-size: contain;
+        width: 84px;
+        height: 25px;
+    }
+    .rightSymbol-7 {
+        background-size: contain;
+        width: 38px;
+        height: 20px;
+        align-self: center;
+    }
+    .smartContracts {
+        margin-top: 20px;
+    }
+    .block-4 {
+        padding: 5%;
+        margin: 0;
+    }
+    .rightSymbol-8 {
+        width: 180px;
+        height: 60px;
+        background-size: contain;
+    }
+    .rightSymbol-9 {
+        width: 60px;
+        height: 60px;
+        background-size: contain;
+    }
+    .telegram {
+        margin: 20px 0 10px 0;
+    }
+    .block-5 {
+        padding: 5%;
+
+    }
+    .rightSymbol_10 {
+        width: 80px;
+        height: 50px;
+        background-size: contain;
+    }
+    .rightSymbol_11 {
+        width: 155px;
+        height: 50px;
+        background-size: contain;
+    }
+}
+@media only screen and (969px <= width < 1200px) {
+    .weUse {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 0;
+    }
+    .leftColumnRocket, .rightColumnRocket  {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 43%;
+    }
+    .leftColumnRocket > div, .rightColumnRocket > div{
+        width: 100%;
+    }
+    .leftColumnRocket p, .rightColumnRocket p {
+        font-size: 16px;
+    }
+    .rightColumnRocket {
+        margin-top: 150px;
+    }
+    .emblem-1 div, .emblem-2 div, .emblem-3 div, .emblem-4 div, .emblem-5 div {
+        background-size: contain;
+    }
+.symbol-1{
+    width:80px;
+    height:57px;
+}
+.symbol-2 {
+    width: 73px;
+    height: 58px;
+}
+.symbol-3 {
+    width: 70px;
+    height:62px;
+}
+.symbol-4 {
+    width: 59px;
+    height: 62px;
+}
+.symbol-5 {
+    height: 74px;
+}
+    .symbol-6 {
+        height: 72px;
+
+
+}
+    .symbol-7 {
+        background-position: top;
+        width: 170px;
+        height: 80px;
+    }
+    .rocket {
+        width: 14%;
+        height: auto;
+    }
+
+    .block-1, .block-2, .block-3, .block-4, .block-5 {
+        position: relative;
+        background-color: #20303D;
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 5%;
+        border: 1px solid white;
+        box-sizing: border-box;
+    }
+    .emblem-3 {
+        justify-content: center;
+        gap: 5%;
+
+    }
+
+    .rightSymbol-1 {
+        background-size: contain;
+        width: 50px;
+        height: 35px;
+    }
+    .rightSymbol-2 {
+        background-size: contain;
+        width: 155px;
+        height: 39px;
+    }
+    .rightSymbol-3 {
+        background-size: contain;
+        width: 50px;
+        height: 27px;
+        align-self: center;
+    }
+    .rightSymbol-4 {
+        background-size: contain;
+        width: 31px;
+        height: 35px;
+    }
+    .rightSymbol-5 {
+        background-size: contain;
+        width: 155px;
+        height: 47px;
+    }
+    .rightSymbol-6 {
+        background-size: contain;
+        width: 113px;
+        height: 43px;
+    }
+    .rightSymbol-7 {
+        background-size: contain;
+        width: 44px;
+        height: 33px;
+        align-self: center;
+    }
+    .block-4 {
+        padding: 5%;
+    }
+    .rightSymbol-8 {
+        width: 215px;
+        height: 71px;
+    }
+    .rightSymbol-9 {
+        width: 70px;
+        height: 70px;
+    }
+
+
+
+}
+/******************************************************/
 footer{
    margin-top: 100px;
-
 }
 .info {
     display: flex;
@@ -1160,6 +1619,13 @@ footer{
         display: block;
         width:157px;
         text-align: center;
+    }
+    @media only screen and (749px <= width < 969px){
+        footer {
+            display: block;
+            margin-top: 30px;
+
+        }
     }
 }
 
