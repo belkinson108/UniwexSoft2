@@ -435,10 +435,10 @@ main {
     width: 78%;
 }
 .post-1 p {
-    width: 75%;
+    width: 83%;
 }
 .post-3 p {
-    width: 76%;
+    width: 83%;
 }
 .post-1{
     display: flex;
@@ -536,7 +536,7 @@ main {
         text-align: center;
         font-weight: 100;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .aboutUs {
         flex-direction: column;
